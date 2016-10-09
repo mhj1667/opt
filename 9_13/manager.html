@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Optimal Calculator</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link href="./manager.css" rel="stylesheet" stylesheet="text/css">
+  </head>
+
+  <!--BODY-->
+  <body>
+    <form action="" name="OptimalInventory" id= "OptimalInventory">
+      <div id="value_input" style="border: 1px solid black;">
+        <p>product name : <input type="text" name="product_name" id="product_name" size="20px"></p>
+        <p><input type="number" id="ProbableSale" name="ProbableSale" value=100 required> : ProbableSale</p>
+        <p><input type="number" id="MinSale" name="MinSale" value=0 required> : MinSale</p>
+        <p><input type="number" id="MaxSale" name="MaxSale" size="10px" value=200 required> : MaxSale</p>
+        <p><input type="number" id="BuyCost" name="BuyCost" size="10px" value=110 required> : BuyCost</p/>
+        <p><input type="number" id="SellCost" name="SellCost" size="10px" value=200 required> : SellCost</p>
+        <p>(OPTIONAL) Enter only if you have salvage cost!)<br></p>
+        <p>Salvage cost: <input type="number" id="SalvageCost" name="SalvageCost" value=10></p>
+        <input id="calc" type="submit" size="20px" value="calc"><br/>
+      </div>
+    </form>
+
+    <!--Optimal Inventory Box-->
+    <div id="Optimal">
+      <p>Optimal inventory: <span id ="Optimal_output"></span></p>
+    </div>
+
+    <!--Graph-->
+    <div id="graph"></div>
+      <p><img src="why.png" height="70"></img></p>
+    </div>
+
+    <!--JAVASCRIPT-->
+    <script type="text/javascript" src="http://d3js.org/d3.v3.js"></script>
+    <script type="text/javascript" src="./manager.js"></script>
+  </body>
+</html>
